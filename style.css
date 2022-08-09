@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(media_style.css);
+:root{
+    /* --main: hsla(303, 92%, 38%, 0.993);
+    --black: rgb(3, 3, 3);
+    --light: hsl(310, 89%, 82%);
+    --gray: rgb(194, 194, 194);
+    --white: rgb(255, 255, 255);
+    --box-shadow: 0 .5rem 1.5rem rgba(5, 5, 5, 0.1);
+
+     */
+    --main: hsla(246, 92%, 38%, 0.993);
+    --black: rgb(3, 3, 3);
+    --light: hsl(234, 89%, 82%);
+    --gray: rgb(194, 194, 194);
+    --white: rgb(255, 255, 255);
+    --box-shadow: 0 .5rem 1.5rem rgba(5, 5, 5, 0.1);
+}
+*{
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 90%;
+    overflow: auto;
+    scroll-padding-top: 5.5rem; 
+    scroll-behavior:smooth; 
+}
+body{
+    /* background-color:hwb(314 87% 5%); */
+    background-color: rgb(190, 215, 236);
+}
+
+/* ........................GLOBAL STYLING......................... */
+a{
+    color: var(--gray);  
+}
+h2{
+    color: var(--main);
+    font-size: 1.3rem;
+}
+section{
+    padding: 1rem 4rem;
+}
+h6{
+    font-size: 1.4rem;
+}
+.h4{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1rem;
+}
+button{
+    font-size: 0.9rem;
+    padding: 0.6rem 2rem;
+    background-color: var(--light);
+    color: var(--white);
+    border-radius: 8px;
+}
+button:hover{
+    transform: scale(1.3);
+}
+.my{
+    margin: 15px 0 0;
+}
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+    text-justify: auto;
+    margin: 10px 0;
+    
+}
+p{
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    border-bottom: 2px solid var(--main);
+}
+main{
+   grid-column: span 8;
+}
+aside{
+    grid-column: span 4;
+}
+hr{
+    border-bottom: 2px solid var(--main);
+    margin: 20px 0;
+}
+input{
+    border: 1px solid var(--gray); outline: none;
+    padding: 0.6rem 1rem;
+    background-color: var(--white);
+    display: block;
+    width: 70%;
+    color: var(--gray);
+}
+/* ............x............GLOBAL STYLING.............x............ */
+
+
+
+
+/* ........................HEADER STYLING......................... */
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color:  var(--white);
+    box-shadow: var(--box-shadow);
+    z-index: 10000;
+    padding: 1rem 4rem;   
+}
+header .header{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;   
+}
+header nav a{
+   padding: 0.7rem;
+   font-size: 0.8rem;
+}
+header nav a:hover{
+   background-color: var(--light);
+   color: var(--white);
+   border-radius: 8px;
+}
+header .boxicon a{
+    font-size: 1rem;
+    padding: 0.1rem;
+}
+header .boxicon a:hover{
+    color: var(--main);
+}
+header .menu{
+    display: none;
+}
+
+/* ............x............HEADER STYLING.............x............ */
+
+
+
+
+
+
+/* ........................MAIN START STYLING......................... */
+#main{
+    background: url(images/bg2.jpeg);
+    background-size: cover;
+    min-height: 32rem;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 4rem;
+    color: var(--white);
+}
+/* .............x...........MAIN END STYLING.............x............ */
+
+
+
+/* ........................PAGE STYLING STARTS......................... */
+.blog{
+    padding-top: 4rem;
+    display: grid;
+    /* grid-template-columns: 70% 30%; */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    position: relative;
+    background-color: var(--white);
+    padding: 1rem;
+}
+.img-info{
+    position: relative;
+}
+.img-info .img-box{
+    overflow: hidden;
+}
+.img-info img:hover{
+    transform: scale(1.1);
+}
+.blog  .info{
+    position: absolute;
+    background-color: var(--light);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 0.5rem 2.4rem;
+    /* top: 95%; right: 35%; */
+    bottom: 0; left: 20vw;
+}
+.blog .post button{
+    border-radius: 0px;
+}
+.blog .post button:hover{
+    transform:scaleX(1.1);
+}
+.blog .popular-tag button:hover{
+    transform:scale(0.9);
+}
+.category ul{
+    line-height: 2;
+    padding: 0rem 1rem;
+}
+.category li{
+    background-color: var(--light);
+    color: var(--white);
+    font-size: 0.8rem;
+    width:  100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.category a{
+    color: var(--white);
+}
+
+aside > div{
+    margin-bottom: 9rem;
+    padding: 0 1rem;
+}
+aside .post {
+    margin-bottom: 4rem;
+}
+.newsletter .sub-btn{
+    border-radius: 0;
+    width: 70%;
+}
+.popular-tag div button{
+    margin: 5px;
+    padding: 0.3rem 0.6rem;
+}
+/* .............x...........PAGE STYLING ENDS.............x............ */
+
+
+/*.............................. Footer Styles ........................... */
+footer{
+    background-color: var(--black);
+    margin-top: 1rem;
+    color: white;
+    padding: 3rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+footer a{
+    color: white;
+}
+.footer-section{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px,2fr));
+    grid-auto-rows: repeat(4, 100px);
+    grid-gap: 3rem;
+}
+.footer1{
+    grid-column: span 2;
+}
+.footer1 h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.social{
+    padding: 0.7rem 0;
+}
+.social a i{
+    font-size: 1.5rem;
+    border-radius: 100%;
+    border: 2px solid white;
+    padding: 0.3rem;
+    margin: 3px;
+}
+
+footer hr{
+    color: white;
+    margin: 5rem 0 1rem;
+    border: 1px solid;
+    text-align: center;
+}
+.copy-right{
+    display: flex;   
+    flex-wrap: wrap;
+   
+}
+.copyright{
+    margin-right: auto;
+}
+
